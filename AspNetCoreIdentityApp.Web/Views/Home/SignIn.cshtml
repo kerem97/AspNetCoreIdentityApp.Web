@@ -1,0 +1,28 @@
+﻿@model SignInViewModel
+
+@{
+    Layout = null;
+}
+
+<link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+<div class="row">
+    <div class="col-md-8 offset-md-3">
+        <h2>Üye Girişi</h2>
+        <form method="post" asp-controller="Home" asp-action="SıgnIn">
+            <div class="mb-3">
+                <label asp-for="Email" class="form-label"></label>
+                <input type="email" class="form-control" asp-for="Email" aria-describedby="emailHelp">
+
+            </div>
+            <div class="mb-3">
+                <label asp-for="Password" class="form-label"></label>
+                <input type="password" class="form-control" asp-for="Password">
+            </div>
+            <div class="mb-3 form-check">
+                <input type="checkbox" class="form-check-input" asp-for="RememberMe">
+                <label class="form-check-label" asp-for="RememberMe"></label>
+            </div>
+            <button type="submit" class="btn btn-primary">Giriş</button>
+        </form>
+    </div>
+</div>
